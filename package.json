@@ -1,36 +1,41 @@
 {
-  "name": "maniac-zukan-strapi",
-  "private": true,
+  "name": "maniac-zukan-admin",
   "version": "0.1.0",
+  "private": true,
   "description": "A Strapi application",
+  "repository": "git@github.com:shinya-machida1/maniac-zukan-strapi.git",
+  "license": "MIT",
+  "author": "A Strapi developer",
+  "main": "index.js",
   "scripts": {
-    "develop": "strapi develop",
-    "start": "strapi start",
+    "prebuild": "cd src/plugins/dashbored && yarn build",
     "build": "strapi build",
-    "strapi": "strapi",
-    "deploy": "strapi deploy"
+    "deploy": "NODE_ENV=production yarn build && gcloud app deploy --appyaml=app.yaml",
+    "develop": "strapi develop",
+    "gcp-build": "strapi build",
+    "gcp-deploy": "strapi build && gcloud app deploy --project maniac-zukan-strapi",
+    "start": "strapi start",
+    "strapi": "strapi"
   },
-  "devDependencies": {},
   "dependencies": {
-    "@strapi/strapi": "4.25.3",
-    "@strapi/plugin-users-permissions": "4.25.3",
-    "@strapi/plugin-i18n": "4.25.3",
     "@strapi/plugin-cloud": "4.25.3",
+    "@strapi/plugin-i18n": "4.25.3",
+    "@strapi/plugin-users-permissions": "4.25.3",
+    "@strapi/strapi": "4.25.3",
     "better-sqlite3": "8.6.0",
+    "pg": "^8.12.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
-    "react-router-dom": "5.3.4",
+    "react-router-dom": "^6.24.1",
+    "strapi-provider-upload-supabase": "^1.0.0",
     "styled-components": "5.3.3"
   },
-  "author": {
-    "name": "A Strapi developer"
-  },
-  "strapi": {
-    "uuid": "7d729a5a-8f2d-4473-bcb5-a537e5ac3b3c"
-  },
+  "devDependencies": {},
   "engines": {
     "node": ">=18.0.0 <=20.x.x",
     "npm": ">=6.0.0"
   },
-  "license": "MIT"
+  "strapi": {
+    "uuid": "7d729a5a-8f2d-4473-bcb5-a537e5ac3b3c"
+  }
 }

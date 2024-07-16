@@ -4,7 +4,7 @@
   "info": {
     "singularName": "article",
     "pluralName": "articles",
-    "displayName": "Article",
+    "displayName": "記事",
     "description": ""
   },
   "options": {
@@ -19,9 +19,8 @@
       "minLength": 2
     },
     "content": {
-      "type": "component",
-      "repeatable": false,
-      "component": "body.text"
+      "type": "richtext",
+      "required": true
     }
   }
 }
