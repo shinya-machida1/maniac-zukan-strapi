@@ -16,8 +16,8 @@ module.exports = ({ env }) => ({
       },
     },
   },
-  dashbored: {
-    enabled: true,
-    resolve: "./src/plugins/dashbored",
-  },
+  // dashbored: {
+  //   enabled: true,
+  //   resolve: "./src/plugins/dashbored",
+  // },
 });

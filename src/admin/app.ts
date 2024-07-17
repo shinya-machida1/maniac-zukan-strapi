@@ -737,7 +737,7 @@ const config = {
   },
 };
 
-const bootstrap = (app) => {
+const bootstrap = (app: any) => {
   console.log(app);
 };
 

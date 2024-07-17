@@ -1,0 +1,19 @@
+{
+  "kind": "collectionType",
+  "collectionName": "spots",
+  "info": {
+    "singularName": "spot",
+    "pluralName": "spots",
+    "displayName": "スポット"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

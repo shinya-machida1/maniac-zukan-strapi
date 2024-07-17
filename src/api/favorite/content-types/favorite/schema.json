@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "favorites",
+  "info": {
+    "singularName": "favorite",
+    "pluralName": "favorites",
+    "displayName": "お気に入り"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "customer": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::customer.customer",
+      "inversedBy": "favorites"
+    },
+    "mylist": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::mylist.mylist",
+      "inversedBy": "favorites"
+    }
+  }
+}
